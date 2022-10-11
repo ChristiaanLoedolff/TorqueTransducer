@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-import my_functions as f
+import functions as f
 
 T = 10   #Nm
 
