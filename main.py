@@ -40,6 +40,7 @@ Torque_avg = np.mean(Torque)
 err = abs((T-Torque_avg)/(T))*100
 
 
+
 sigfig = 3
 print(f"Shear Stress: {round(shearStress,sigfig)} MPa")
 print(f"Safety Factor: {round(sf,sigfig)}")
