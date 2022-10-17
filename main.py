@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import functions as f
 
-T = 10   #Nm
+T = 0.5   #Nm
 
 OD = 24     #mm
 ID = 22     #mm
@@ -19,7 +19,7 @@ sf = shearStrength/shearStress
 
 
 fs = 4800
-cycles = 1
+cycles = 10
 rpm = 100
 offset1 = 0                 #degrees
 offset2 = deflection        #degrees
@@ -50,14 +50,14 @@ print(f"Torque: {T} Nm")
 print(f"Measured Torque: {round(Torque_avg,sigfig)} Nm")
 print(f"Error: {round(err,sigfig)} %")
 
-
-
-plt.figure(1)
-plt.grid()
-plt.plot(time*1000, s1, '.-r')
-plt.plot(time*1000, s2, '.-b')
-plt.plot(tc1*1000, Vc1, 'ok')
-plt.plot(tc2*1000, Vc2, 'ok')
-plt.xlabel("Time [ms]")
-plt.ylabel("Volts [V]")
-plt.show()
+printf = 0
+if printf == 1:
+    plt.figure(1)
+    plt.grid()
+    plt.plot(time*1000, s1, '.-r')
+    plt.plot(time*1000, s2, '.-b')
+    plt.plot(tc1*1000, Vc1, 'ok')
+    plt.plot(tc2*1000, Vc2, 'ok')
+    plt.xlabel("Time [ms]")
+    plt.ylabel("Volts [V]")
+    plt.show()
